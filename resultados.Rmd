@@ -1,0 +1,62 @@
+---
+title: "Analisis de resultados"
+author: "Raul"
+
+output: pdf_document
+---
+
+    
+```{r, include=FALSE}
+knitr::read_chunk("base_asistencia.R")
+```
+## Analisis de las 4 bases de datos de asistencia 
+En este documento se muestra el proceso de limpieza y estandarización de las bases de datos de asistencia, con el objetivo de crear una base final que permita analizar la asistencia.
+
+
+
+
+Se realiza la lectura del excel en r
+```{r leer_excel}
+```
+Se realiza la limpieza de los datos.
+```{r limpiar_datos}
+
+```
+se muestra la tabla limpia.
+```{r}
+head(df_clean)
+```
+Se agrupa deacuardo a la clave unica (correo electronico)
+```{r agrupar_clave}
+```
+se muestra la tabla final
+```{r}
+head(df_final)
+```
+ 
+se filtran los datos para obtener los casos de cero asistencias
+```{r cero_asistencias}
+```
+```{r}
+head(cero_asistencia)
+count(cero_asistencia)
+```
+
+se filtran los datos para obtener los casos de cinco asistencias
+```{r cinco_asistencias}
+```
+```{r}
+head(cinco_asistencia)
+count(cinco_asistencia)
+```
+se obtiene una media de asistencia de:
+```{r}
+media
+```
+
+
+despues de la limpieza y filtrado se detecto duplicidad, acontinuacion se muestra el total de registros y el total de registros unicos
+```{r}
+count(df)
+count(df_final)
+```

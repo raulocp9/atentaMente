@@ -1,0 +1,13 @@
+# R environment
+renv/
+
+# Archivos de R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Outputs
+*.pdf
+
+
+
